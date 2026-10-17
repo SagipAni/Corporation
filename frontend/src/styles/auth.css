@@ -2,7 +2,7 @@
    Put your golden-field photo at  frontend/public/auth-bg.jpg  */
 
 .auth-page {
-  --auth-bg: url("./src/assets/login_img.jpg");
+  --auth-bg: url("../assets/login_img.jpg");
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -41,7 +41,9 @@ function Login() {
     };
     const requestedRole = accounts.admin.includes(typed) ? "admin" : tab;
     if (password !== "test123" || !accounts[requestedRole].includes(typed)) {
-      setLoginError("Invalid test account or password. Use one of the demo accounts below.");
+      setLoginError(
+        "Invalid test account or password. Use one of the demo accounts below.",
+      );
       return;
     }
     setLoginError("");
@@ -81,7 +83,9 @@ function Login() {
               name="identifier"
               className="auth-input"
               type="text"
-              placeholder={tab === "buyer" ? "Email / username (buyer or admin)" : "seller"}
+              placeholder={
+                tab === "buyer" ? "Email / username (buyer or admin)" : "seller"
+              }
               required
             />
           </label>
@@ -98,7 +102,11 @@ function Login() {
             />
           </label>
 
-          {loginError && <p role="alert" className="auth-error">{loginError}</p>}
+          {loginError && (
+            <p role="alert" className="auth-error">
+              {loginError}
+            </p>
+          )}
           <button type="submit" className="auth-button">
             {tab === "buyer" ? "Log in" : "Go to my store"}
           </button>
@@ -111,9 +119,16 @@ function Login() {
         </form>
         <div className="demo-accounts" aria-label="Demo login accounts">
           <strong>Testing accounts</strong>
-          <span>Buyer: <b>buyer</b> / <b>test123</b></span>
-          <span>Seller: <b>seller</b> / <b>test123</b></span>
-          <span>Admin: <b>admin</b> / <b>test123</b> <small>(use the Buyer tab)</small></span>
+          <span>
+            Buyer: <b>buyer</b> / <b>test123</b>
+          </span>
+          <span>
+            Seller: <b>seller</b> / <b>test123</b>
+          </span>
+          <span>
+            Admin: <b>admin</b> / <b>test123</b>{" "}
+            <small>(use the Buyer tab)</small>
+          </span>
         </div>
         <p className="auth-corner-text">
           {tab === "buyer" ? (
