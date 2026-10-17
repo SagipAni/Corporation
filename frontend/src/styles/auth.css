@@ -293,4 +293,28 @@
     text-align: center;
   }
 }
-.demo-accounts{margin-top:18px;padding:12px 14px;border:1px solid #d5e3d0;border-radius:12px;display:grid;gap:5px;color:#285f40;font-size:12px}.demo-accounts strong{font-size:12px;letter-spacing:.5px}.demo-accounts small{opacity:.8}.auth-error{color:#a32d2d;background:#fff0f0;border:1px solid #e8bcbc;border-radius:10px;padding:10px;font-size:13px}
+.demo-accounts {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: 1px solid #d5e3d0;
+  border-radius: 12px;
+  display: grid;
+  gap: 5px;
+  color: #285f40;
+  font-size: 12px;
+}
+.demo-accounts strong {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+}
+.demo-accounts small {
+  opacity: 0.8;
+}
+.auth-error {
+  color: #a32d2d;
+  background: #fff0f0;
+  border: 1px solid #e8bcbc;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+}
