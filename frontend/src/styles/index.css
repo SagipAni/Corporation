@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+
+/* Tailwind v4 without its preflight reset, so existing pages keep their look. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+:root {
+  --deep-emerald: #02542d;
+  --dark-moss: #1c361f;
+  --pale-sage: #7a9c7c; /* use at 50% opacity */
+  --soft-mint: #99b8a5;
+  --spring-green: #91c038;
+  --soft-olive: #8bac83;
+  --warm-ecru: #f5f3ec; /* page background */
+  --text-p: #73ad6e;
+  --spring-light: #d5ff86;
+
+  /* SAGIP ANI app design system (logged-in pages) */
+  --forest-green: #0a4d2a;
+  --sage: #8fb58b;
+  --light-sage: #dbe9d6;
+  --cream: #eef2ea;
+  --sidebar-bg: #f7f9f4;
+  --sidebar-border: #dfe6d9;
+  --white: #ffffff;
+  --muted-green: #3d7352;
+  --alert-red: #e24a4f;
+  --alert-amber: #c8780f;
+  --alert-green: #2f9a3f;
+
+  /* Text colors */
+  --text-color: #333333;
+
+  /* Font settings */
+  --font-family: var(--font-body);
+  --font-display: "Playfair Display", Georgia, serif; /* hero + big headings */
+  --font-serif: "Noto Serif", Georgia, serif; /* card titles */
+  --font-body: "Noto Sans", "Segoe UI", Arial, sans-serif; /* body + UI */
+}
+* {
+  list-style: none;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--warm-ecru);
+  color: var(--text-color);
+  font-family: var(--font-family);
+
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  padding: 0;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+/* Only the landing page needs svg icons stretched to their parent's height.
+   (Before, this rule applied to every svg, which would stretch sidebar icons.) */
+.landing svg {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* 404 page */
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: var(--font-body);
+  color: var(--forest-green);
+}
+.not-found h1 {
+  font-family: var(--font-display);
+  font-size: 3rem;
+}
+.not-found a {
+  color: var(--forest-green);
+  font-weight: 700;
+}

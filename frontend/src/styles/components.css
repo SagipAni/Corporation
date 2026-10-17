@@ -1,0 +1,312 @@
+/* ---------- Shared components for logged-in pages ---------- */
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border: 2px solid var(--forest-green);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.btn-outline {
+  background-color: transparent;
+  color: var(--forest-green);
+}
+.btn-solid {
+  background-color: var(--forest-green);
+  color: var(--white);
+}
+.btn-danger {
+  background-color: var(--alert-red);
+  border-color: var(--alert-red);
+  color: var(--white);
+}
+.btn-sm {
+  padding: 7px 18px;
+  font-size: 0.9rem;
+}
+.btn-upper {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.btn-block {
+  width: 100%;
+}
+
+/* Filter pills */
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0;
+}
+.pill {
+  padding: 8px 24px;
+  border: 2px solid var(--forest-green);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--forest-green);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.pill-active {
+  background-color: var(--forest-green);
+  color: var(--white);
+}
+
+/* Cards */
+.card {
+  padding: 28px;
+  border-radius: 22px;
+  background-color: var(--white);
+  box-shadow: 0 4px 18px rgba(10, 77, 42, 0.07);
+}
+
+/* Stat cards */
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 26px 30px;
+  border-radius: 22px;
+  background-color: var(--white);
+  box-shadow: 0 4px 18px rgba(10, 77, 42, 0.07);
+}
+.stat-label {
+  color: var(--muted-green);
+  font-size: 1.05rem;
+}
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.stat-card-value-first {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.badge-red {
+  background-color: var(--alert-red);
+}
+.badge-amber {
+  background-color: var(--alert-amber);
+}
+.badge-green {
+  background-color: var(--alert-green);
+}
+
+/* Tables */
+.table-card {
+  padding: 14px;
+  overflow-x: auto;
+  border-radius: 22px;
+  background-color: var(--white);
+  box-shadow: 0 4px 18px rgba(10, 77, 42, 0.07);
+}
+.data-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 1rem;
+  text-align: left;
+}
+.data-table th {
+  padding: 18px 20px;
+  background-color: var(--light-sage);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.data-table th:first-child {
+  border-radius: 14px 0 0 14px;
+}
+.data-table th:last-child {
+  border-radius: 0 14px 14px 0;
+}
+.data-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e3eadf;
+  vertical-align: middle;
+}
+.cell-strong {
+  font-weight: 700;
+}
+.cell-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.cell-with-image {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.thumb {
+  flex: none;
+  width: 52px;
+  height: 46px;
+  border-radius: 12px;
+  background-color: var(--sage);
+}
+.avatar {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--sage);
+}
+.sub-text {
+  color: var(--muted-green);
+}
+.icon-button {
+  padding: 4px 6px;
+  border: none;
+  background: none;
+  color: var(--forest-green);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 28px;
+}
+.pagination-buttons {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+}
+
+/* Form controls */
+.text-input,
+.select-input,
+.textarea-input {
+  width: 100%;
+  padding: 0 24px;
+  border: 1.5px solid #d6dfd1;
+  border-radius: 18px;
+  background-color: var(--white);
+  color: var(--forest-green);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+.text-input,
+.select-input {
+  height: 56px;
+}
+.textarea-input {
+  min-height: 112px;
+  padding: 18px 24px;
+  resize: vertical;
+}
+.text-input::placeholder,
+.textarea-input::placeholder {
+  color: #5f8a6f;
+}
+.select-wrap {
+  position: relative;
+}
+.select-wrap::after {
+  content: "v";
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+.select-input {
+  appearance: none;
+  -webkit-appearance: none;
+  color: #5f8a6f;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 700;
+}
+
+/* Toggle switch */
+.toggle {
+  position: relative;
+  flex: none;
+  width: 54px;
+  height: 30px;
+  border: none;
+  border-radius: 999px;
+  background-color: #c9d3c4;
+  cursor: pointer;
+}
+.toggle-knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+.toggle-on {
+  background-color: var(--forest-green);
+}
+.toggle-on .toggle-knob {
+  left: 27px;
+}
+
+/* A white card made of rows that each have a toggle on the right */
+.toggle-list {
+  padding: 8px 28px;
+  border-radius: 22px;
+  background-color: var(--white);
+  box-shadow: 0 4px 18px rgba(10, 77, 42, 0.07);
+}
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e3eadf;
+}
+.toggle-row-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+.toggle-row-description {
+  color: var(--muted-green);
+  margin-top: 2px;
+}
+.toggle-row-plain {
+  font-weight: 400;
+}

@@ -1,0 +1,296 @@
+/* ---------- Login and Sign-up pages ----------
+   Put your golden-field photo at  frontend/public/auth-bg.jpg  */
+
+.auth-page {
+  --auth-bg: url("./src/assets/login_img.jpg");
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  min-height: 90vh;
+  padding: 18px;
+  overflow: hidden;
+  background-color: #2f3b24;
+  color: #ffffff;
+  font-family: var(--font-body);
+}
+.auth-page *,
+.auth-page *::before,
+.auth-page *::after {
+  box-sizing: border-box;
+}
+
+/* Blurred copy of the photo behind the form side */
+.auth-page::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  background-image: var(--auth-bg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+}
+.auth-page > * {
+  position: relative;
+}
+
+/* Sharp photo card with the headline */
+.auth-photo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 90px 32px 32px;
+  min-height: calc(100vh - 36px);
+  border: 1.5px solid #ffffff;
+  border-radius: 34px;
+  background-image: var(--auth-bg);
+  background-size: cover;
+  background-position: center;
+}
+.auth-photo h2 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.auth-photo p {
+  max-width: 320px;
+  font-size: 1.05rem;
+  line-height: 1.35;
+}
+.auth-signup .auth-photo {
+  grid-column: 1;
+  grid-row: 1;
+}
+.auth-signup .auth-form-side {
+  grid-column: 2;
+  grid-row: 1;
+  top: 150px;
+}
+
+/* Form side */
+.auth-form-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.auth-heading {
+  text-align: center;
+}
+.auth-heading h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+.auth-heading p {
+  font-size: 0.78rem;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 12px;
+  font-size: 0.85rem;
+}
+.auth-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 20px;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
+.auth-input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.auth-note {
+  padding: 16px 20px;
+  border-radius: 20px;
+  background-color: rgba(60, 20, 40, 0.55);
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+.auth-button {
+  height: 48px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--dark-moss);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.auth-button-glass {
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #111111;
+}
+.auth-button-upper {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.auth-footer-text {
+  font-size: 0.85rem;
+  text-align: center;
+}
+.auth-link {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.auth-corner-text {
+  /* Keep the account link centered beneath the form on desktop and mobile. */
+  position: static;
+  align-self: center;
+  width: 100%;
+  margin: 0;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* Buyer | Seller switch */
+.role-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  padding: 3px;
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.role-option {
+  height: 40px;
+  border: none;
+  border-radius: 999px;
+  background: none;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.role-active {
+  background-color: var(--deep-emerald);
+}
+
+/* Logo pill and back button */
+.logo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 14px 3px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #15a950;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.logo-pill img {
+  width: 22px;
+  height: auto;
+}
+.auth-top-left {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+}
+.auth-top-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  grid-column: 2;
+  grid-row: 1;
+}
+.back-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.auth-signup .auth-form-side {
+  justify-content: flex-start;
+  padding-top: 24px;
+  max-width: 400px;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 800px) {
+  .auth-page {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+  .auth-photo,
+  .auth-signup .auth-photo {
+    grid-column: 1;
+    grid-row: 2;
+    min-height: 220px;
+    padding: 28px 24px;
+  }
+  .auth-login .auth-photo {
+    grid-column: 1;
+    grid-row: 2;
+    min-height: 220px;
+    padding: 28px 24px;
+    margin-top: 25px;
+  }
+  .auth-form-side,
+  .auth-signup .auth-form-side {
+    grid-column: 1;
+    grid-row: 3;
+    padding: 12px 0 40px;
+    height: 100vh;
+    top: 0px;
+  }
+  .auth-login .auth-form-side {
+    grid-column: 1;
+    grid-row: 3;
+    padding: 12px 0 40px;
+    height: 80vh;
+    top: 0px;
+  }
+  .auth-top-bar {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
+  }
+  .auth-corner-text {
+    position: static;
+    text-align: center;
+  }
+}
+.demo-accounts{margin-top:18px;padding:12px 14px;border:1px solid #d5e3d0;border-radius:12px;display:grid;gap:5px;color:#285f40;font-size:12px}.demo-accounts strong{font-size:12px;letter-spacing:.5px}.demo-accounts small{opacity:.8}.auth-error{color:#a32d2d;background:#fff0f0;border:1px solid #e8bcbc;border-radius:10px;padding:10px;font-size:13px}
